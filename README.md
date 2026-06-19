@@ -1,9 +1,14 @@
-# DataLogger_Graphtec_GL840_Auswertung
-This code uses your csv straight out of the DataLogger GL840. No editing of the csv is neccesary!
+# DataLogger_Graphtec_GL840_Evaluation
 
-Copy this code in the same folder as the csv you want to evaluate. Then open the code in vs studio and insert your csv file name as replacment for "name.csv" in line 9.
-Then you have to edit the date "2026-00-00 00:00:00" (years-mm-dd dd:mm:ss) to your current date of the data in line 95.
-"00:00:00 -> dd:mm:ss" this is your start_time for the Diagramm.
-The length of the diagram can be changed in line 111. The left value is deciding how many hours the diagramm starts ahead your setted start_time.
-The right value is responsible how many hours after start_time are printed in the diagramm. 
-(left=0, right = 1.5) -> Diagramm starts at start_time and ends at (start time + 1.5h)
+This script processes CSV files straight out of the **Graphtec GL840 DataLogger**. No prior editing or formatting of the CSV file is required!
+
+### 🚀 Quick Start Guide
+
+1. **File Placement:** Copy the script into the same folder as the CSV file you want to evaluate.
+2. **Set File Name:** Open the code (e.g., in VS Code) and replace `"name.csv"` in **line 9** with your actual CSV file name.
+3. **Set Date & Start Time:** In **line 95**, update the date and start time for the diagram.
+   * Format: `'YYYY-MM-DD HH:MM:SS'` (e.g., `'2026-06-19 14:30:00'`)
+4. **Adjust Time Window (Optional):** In **line 111**, you can change the duration of the diagram (in hours):
+   * The **left value** determines how many hours *before* the start time the diagram begins.
+   * The **right value** determines how many hours *after* the start time the diagram ends.
+   * *Example:* `(left=0, right=1.5)` -> The diagram starts exactly at your start time and covers the next 1.5 hours.
